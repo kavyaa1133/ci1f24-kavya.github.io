@@ -1,0 +1,51 @@
+
+body {
+    background-color: #cacaca;
+    padding: 50px;
+}
+h1{
+    text-align: center;
+    color: #5d779a;
+    font-size: 120px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+p{
+    text-align: center;
+    color: #3f4464;
+    font-family: "ivyora-text", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+}
+
+/* Navigation Menu Styles */
+nav {
+    text-align: center; /* Center the navigation menu */
+    margin-top: 40px; 
+    margin-bottom: 35px;
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;         
+}
+
+nav li {
+    display: inline;      /* Display list items in a line */
+    margin-right: 15px;  /* Space between items */
+}
+
+nav a {
+    text-decoration: underline; /* underline from links */
+    color: #5d779a;       
+    font-size: 18px;      /* Font size for navigation links */
+    font-weight: 550;     
+}
+
+nav a:hover {
+    text-decoration: none; /* remove underline on hover for better visibility */
+    font-weight: 950;     /* Bold text when hovering */
+    color: #275fa8;
+}

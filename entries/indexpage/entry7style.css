@@ -1,0 +1,150 @@
+body {
+    background-color: #fff8d3;
+    padding: 10px;
+}
+  
+h1 {
+    text-align: center;
+    color: #a95d1e;
+    font-size: 170px;
+    font-style: normal;
+    font-family: "am-udine", sans-serif;
+    font-weight: 400;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+/* Wrapper for title with images on each side */
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Space between images and the title */
+    margin-bottom: 50px;
+}
+
+.leaves-image {
+    width: 130px; /* Adjust size as needed */
+    height: auto;
+}
+  
+p{
+    text-align: center;
+    color: #4a3d14;
+    font-size: 25px;
+    font-family: "ivyora-text", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.flex-container > div {
+    width: 70%;
+    text-align: center;
+    line-height: 1.5; 
+}
+  
+/* Flex container styles */
+.flex-container {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;    /* Center content vertically */
+    padding: 20px;         
+}
+  
+/* Style for the text block */
+.fall-text {
+    font-size: 18px;              /* Adjust font size as needed */
+    line-height: 1.6;             /* Line height for readability */
+    color: #333;                  
+    position: relative;           /* Position for the popup */
+}
+  
+/* Hover effect: scale the text */
+.fall-text:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+  
+/* Popup image styles */
+.popup-image {
+    position: absolute;           /* Absolute positioning */
+    top: 50%;                    /* Center vertically */
+    left: 50%;                   /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the image */
+    opacity: 0;                  /* Hide the image initially */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    pointer-events: none;        /* Prevent interaction with the image */
+}
+  
+/* Show image on hover */
+.fall-text:hover .popup-image {
+    opacity: 1;                  /* Show the image */
+    z-index: 10;                 /* Bring the image above other elements */
+}
+  
+/* Image styling */
+.popup-image img {
+    width: 1350px;                /* Adjust image size */
+    height: 420px;                /* Maintain aspect ratio */
+}
+  
+/* Apply a border around the body */
+body {
+    margin: 0;
+    padding: 0;
+    border: 12px solid #5c1313; /* Adjust thickness if needed */
+    box-sizing: border-box;
+    min-height: 100vh; /* Ensure the page height covers the viewport */
+}
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    /* Adjust the heading */
+    h1 {
+        font-size: 80px;      /* Smaller heading for mobile screens */
+        margin-bottom: 30px;
+    }
+
+    /* Scale down the paragraph text */
+    p {
+        font-size: 18px;      /* Smaller font for mobile */
+        line-height: 1.4;
+        padding: 0 10px;      /* Add padding for mobile readability */
+    }
+
+    /* Scale down the .fall-text container */
+    .fall-text {
+        font-size: 14px;      /* Smaller font size for mobile */
+        line-height: 1.4;
+        padding: 10px;        /* Adjust padding */
+    }
+
+    /* Scale down the pop-up image */
+    .popup-image {
+        position: fixed;          /* Use fixed to keep it centered in the viewport */
+        left: 50%;                /* Center horizontally */
+        top: 50%;                 /* Center vertically */
+        transform: translate(-50%, -50%); /* Adjust position to center */
+        opacity: 0;               /* Hide image initially */
+        transition: opacity 0.3s ease; /* Smooth transition for visibility */
+        z-index: 50;              /* Ensure it appears above other content */
+    }
+
+    /* Show image on hover */
+    .fall-text:hover .popup-image {
+        opacity: 1;               /* Show the image on hover */
+    }
+
+    .popup-image img {
+        width: 120%;               /* Adjust image width for mobile */
+        height: auto;             /* Maintain aspect ratio */
+        max-width: 100%;          /* Prevent overflow */
+    }
+}

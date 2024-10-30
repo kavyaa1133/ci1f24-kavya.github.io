@@ -1,0 +1,89 @@
+body {
+  background-color: #cccccc;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #a91e1e;
+  font-size: 170px;
+  font-style: normal;
+  font-family: "am-udine", sans-serif;
+  font-weight: 400;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+p{
+  text-align: center;
+  color: #4a3d14;
+  font-size: 29px;
+  font-family: "ivyora-text", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-container > div {
+  width: 70%;
+  text-align: center;
+  line-height: 1.5; 
+}
+
+/* Flex container styles */
+.flex-container {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;    /* Center content vertically */
+  padding: 20px;         
+}
+
+/* Style for the text block */
+.theater-text {
+  font-size: 18px;              /* Adjust font size as needed */
+  line-height: 1.6;             /* Line height for readability */
+  color: #333;                  /* Text color */
+  position: relative;           /* Position for the popup */
+}
+
+/* Hover effect: scale the text */
+.theater-text:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Popup image styles */
+.popup-image {
+  position: absolute;           /* Absolute positioning */
+  top: 50%;                    /* Center vertically */
+  left: 50%;                   /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the image */
+  opacity: 0;                  /* Hide the image initially */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  pointer-events: none;        /* Prevent interaction with the image */
+}
+
+/* Show image on hover */
+.theater-text:hover .popup-image {
+  opacity: 1;                  /* Show the image */
+  z-index: 10;                 /* Bring the image above other elements */
+}
+
+/* Image styling */
+.popup-image img {
+  width: 1360px;                /* Adjust image size */
+  height: 430px;                /* Maintain aspect ratio */
+}
+
+/* Apply a golden border around the body */
+body {
+  margin: 0;
+  padding: 0;
+  border: 12px solid #d4af37; /* Adjust thickness if needed */
+  box-sizing: border-box;
+  min-height: 100vh; /* Ensure the page height covers the viewport */
+}

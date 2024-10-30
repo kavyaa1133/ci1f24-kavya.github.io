@@ -1,0 +1,104 @@
+/* Apply grid background to the body */
+body {
+  background-image: linear-gradient(to right, #0000001a 1px, transparent 1px),
+                    linear-gradient(to bottom, #0000001a 1px, transparent 1px);
+  background-size: 20px 20px; /* Adjust grid size */
+  background-color: #cccccc;  /* Background color behind the grid */
+}
+
+h1 {
+  text-align: center;
+  color: #a1b4bd;
+  font-size: 170px;
+  font-style: normal;
+  font-family: "am-udine", sans-serif;
+  font-weight: 400;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+/* Flexbox container */
+.container {
+  display: flex;
+  justify-content: center; /* Aligns items horizontally */
+  align-items: center; /* Aligns items vertically */
+  height: 35vh; /* Full viewport height */
+  width: 170;
+  background-color: #dbdbdb;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap; /* Allows items to wrap if necessary */
+}
+
+/* Common styles for all items */
+.item {
+  color: white;
+  padding: 50px;
+  margin: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+  width: 100px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Individual background colors for each item */
+.item-1 {
+  background-color: #708090; /* SlateGray */
+}
+
+.item-2 {
+  background-color: #A9A9A9; /* Silver */
+}
+
+.item-3 {
+  background-color: #36454F; /* Charcoal */
+}
+
+.item-4 {
+  background-color: #C0C0C0; /* Silver */
+}
+
+.item-5 {
+  background-color: #6e889d; /* Timberwolf */
+}
+
+/* Hover effect on items */
+.item:hover {
+  transform: scale(1.1); /* Slightly increase size */
+}
+
+p{
+  text-align: center;
+  color: #4a3d14;
+  font-size: 18px;
+  font-family: "ivyora-text", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 45px;
+}
+
+.flex-container > div {
+  width: 60%;
+  text-align: center;
+  line-height: 1.5; 
+}
+
+/* Styling for the image container */
+.right-image {
+  position: absolute;         /* Allow positioning relative to the page */
+  left: calc(100% - 290px);   /* Move the image to the right edge and adjust */  
+  top: 340px;                  /* Add some space from the top */
+}
+
+/* Styling for the image */
+.right-image img {
+  width: 325px;               /* Set the width of the image */
+  height: 510px;               /* Maintain aspect ratio */
+}
