@@ -1,0 +1,178 @@
+/* Snowfall image */
+.snowfall-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 90vh; /* Adjust height as needed to control how much of the upper part it covers */
+    overflow: hidden;
+    z-index: -1; /* Send behind other content */
+}
+
+.snowfall-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+body {
+    background-color: #e8f8fb;
+    padding: 20px;
+    border: 15px solid #add8e680; /* slight transparency */
+    box-shadow: 0 0 15px #add8e6cc; /* glow */
+    backdrop-filter: blur(3px); /* glass effect */
+    border-radius: 20px; /* Rounded edges */
+}
+
+/* Inner shadow effect to enhance the border */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 10px solid #add8e64d; /* Additional inner icy border */
+    pointer-events: none; /* doesn't block other content */
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px #ffffff99; /* Inner glow for frosty effect */
+}
+
+h1 {
+    text-align: center;
+    color: #54779a;
+    font-size: 170px;
+    font-style: normal;
+    font-family: "am-udine", sans-serif;
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-top: 5px;
+
+    /* Ice border styling */
+    padding: 20px;
+    border: 10px solid #add8e680; /* Light blue with transparency */
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 0 15px #add8e6cc, inset 0 0 10px #ffffff80; /* Outer glow and inner glow for a frosty effect */
+    backdrop-filter: blur(3px); /* Frosted effect */
+    background-color: #ffffff33; /* Light frosty background inside the border */
+}
+
+p{
+    text-align: left;
+    color: #164867;
+    font-size: 22px;
+    font-family: "ivyora-text", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 45px;
+    margin-left: 40px;
+  }
+  
+  .flex-container > div {
+    width: 98%;
+    text-align: left;
+    line-height: 1.5; 
+  }
+
+/* Flexbox container */
+.container {
+    display: flex;
+    justify-content: center; /* Aligns items horizontally */
+    align-items: center; /* Aligns items vertically */
+    height: 35vh; /* Full viewport height */
+    width: 170;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Allows items to wrap if necessary */
+  }
+  
+  /* Common styles for all items */
+  .item {
+    color: white;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+    width: 100px;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  /* Individual background colors for each item */  
+  .item-2 {
+    background-color: #CFE3E9; /* Crystal Blue */
+  }
+  
+  .item-3 {
+    background-color: #D1D5D8; /* Silver Gray */
+  }
+  
+  .item-4 {
+    background-color: #A9C9D6; /* Icy Teal */
+  }
+  
+  .item-5 {
+    background-color: #3B5360; /* Deep Blue */
+  }
+
+/* Hover effect on items */
+.item:hover {
+    transform: scale(1.1); /* Slightly increase size */
+}
+
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  body {
+      padding: 10px;
+      border-width: 10px;
+      border-radius: 10px;
+  }
+
+  h1 {
+      font-size: 80px; 
+      padding: 10px;
+      border-width: 5px;
+      border-radius: 5px;
+  }
+
+  .snowfall-image {
+      height: 95vh;
+  } 
+
+  p {
+      font-size: 16px;
+      line-height: 1.4;
+  }
+
+  .flex-container {
+      margin-top: 20px;
+      margin-left: 20px;
+  }
+
+  .flex-container > div {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .container {
+      flex-direction: column;
+      height: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+
+  .item {
+      padding: 20px;
+      margin: 20px;
+      font-size: 16px; 
+      width: 80px; 
+      border-radius: 10px;
+  }
+}
