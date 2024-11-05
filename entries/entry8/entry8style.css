@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 90vh; /* Adjust height as needed to control how much of the upper part it covers */
+    height: 95vh; /* Adjust height as needed to control how much of the upper part it covers */
     overflow: hidden;
     z-index: -1; /* Send behind other content */
 }
@@ -68,59 +68,56 @@ p{
   
   .flex-container {
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin-top: 45px;
-    margin-left: 40px;
+    flex-direction: row;
+    align-items: wrap;
+    margin-top: 60px;
+    margin-left: 90px;
+    gap: 40px;
   }
   
   .flex-container > div {
-    width: 98%;
+    width: 60%;
     text-align: left;
     line-height: 1.5; 
   }
 
-/* Flexbox container */
+/* Flexbox container for color items */
 .container {
-    display: flex;
-    justify-content: center; /* Aligns items horizontally */
-    align-items: center; /* Aligns items vertically */
-    height: 35vh; /* Full viewport height */
-    width: 170;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    flex-wrap: wrap; /* Allows items to wrap if necessary */
-  }
+  display: flex;
+  flex-direction: row; /* Arrange items in two columns */
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+  gap: 10px; 
+  margin-top: 1px;
+  margin-bottom: 10px;
+  height: auto;
+}
   
-  /* Common styles for all items */
-  .item {
-    color: white;
-    padding: 50px;
-    margin: 50px;
-    border-radius: 20px;
-    font-size: 20px;
-    text-align: center;
-    width: 100px;
-    transition: transform 0.3s, background-color 0.3s;
-  }
-  
-  /* Individual background colors for each item */  
-  .item-2 {
-    background-color: #CFE3E9; /* Crystal Blue */
-  }
-  
-  .item-3 {
-    background-color: #D1D5D8; /* Silver Gray */
-  }
-  
-  .item-4 {
-    background-color: #A9C9D6; /* Icy Teal */
-  }
-  
-  .item-5 {
-    background-color: #3B5360; /* Deep Blue */
-  }
+.item {
+  color: white;
+  padding: 30px; /* Reduce padding for a smaller box size */
+  margin: 10px; 
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+  width: 55%; /* Adjust width for two columns */
+  transition: transform 0.3s, background-color 0.3s;
+}
 
+/* Individual background colors for each item */  
+.item-2 {
+  background-color: #CFE3E9; /* Crystal Blue */
+}
+.item-3 {
+  background-color: #D1D5D8; /* Silver Gray */
+}
+.item-4 {
+  background-color: #A9C9D6; /* Icy Teal */
+}
+.item-5 {
+  background-color: #3B5360; /* Deep Blue */
+}
 /* Hover effect on items */
 .item:hover {
     transform: scale(1.1); /* Slightly increase size */
