@@ -144,7 +144,7 @@ p{
     height: auto;
 }
 
-/* Moving Border Animation */
+/* Moving/Color Changing Border Animation */
 .moving-border {
     position: absolute;
     bottom: -5; 
