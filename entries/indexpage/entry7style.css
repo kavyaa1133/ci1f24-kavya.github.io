@@ -10,7 +10,7 @@ h1 {
     font-style: normal;
     font-family: "am-udine", sans-serif;
     font-weight: 400;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
     margin-top: 20px;
 }
 
@@ -24,7 +24,7 @@ h1 {
 }
 
 .leaves-image {
-    width: 130px; /* Adjust size as needed */
+    width: 130px;
     height: auto;
 }
   
@@ -54,7 +54,7 @@ p{
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center;    /* Center content vertically */
-    padding: 20px;         
+    padding: 7px;         
 }
   
 /* Style for the text block */
