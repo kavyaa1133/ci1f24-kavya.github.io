@@ -1,0 +1,182 @@
+body {
+    background-color: #E8D3C5;
+}
+
+/* Initial styling */
+#brownstones {
+    text-align: center;
+    color: #3A231A; /* Original color */
+    font-size: 170px;
+    font-style: normal;
+    font-family: "am-udine", sans-serif;
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    cursor: pointer; /* Shows a pointer on hover */
+    position: relative;
+    transition: color 0.3s ease; /* Smooth transition for color */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #brownstones.active {
+    text-shadow: 0 0 10px #D2B48C, 0 0 20px #F4A460; /* Warm glowing effect */
+  }
+  
+  body.brownstone-bg {
+    background: linear-gradient(#A0522D, #DEB887);
+    background-size: cover;
+    transition: background 0.5s ease;
+  }
+
+#brownstones::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Adjusts where the underline appears */
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #9a4326; /* Underline color */
+    transition: width 0.3s ease; /* Smooth transition for underline */
+}
+
+#brownstones:hover {
+    color: #7B4C3D; /* Change color on hover */
+}
+
+#brownstones:hover::after {
+    width: 100%; /* Expands the underline */
+}
+
+
+p {
+    text-align: center;
+    color: #252420;
+    font-size: 18px;
+    font-family: "ivyora-text", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+p1{
+    text-align: left;
+    color: #252420;
+    font-size: 18px;
+    font-family: "ivyora-text", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+  
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: wrap;
+    margin-top: 40px;
+    margin-left: 50px;
+    gap: 10px;
+}
+  
+.flex-container > div {
+    width: 50%;
+    text-align: left;
+    line-height: 1.5; 
+}
+
+/* Image styling with glow effect */
+.right-image img {
+  width: 570px;  /* Set a smaller width for the image */
+  height: auto;  /* Maintain the aspect ratio */
+  box-shadow: 0 0 15px 5px #5b2707cc; /* Gold glowing effect */
+  transition: box-shadow 0.3s ease; /* Smooth transition for glow effect */
+}
+
+/* Container for the image */
+.right-image {
+  position: absolute;     
+  top: 447px;              /* Move the image further down */
+  right: 65px;             /* Image aligned to the right side of the page */
+  flex-shrink: 0;        
+  padding: 10px;           /* Space between the image and the border */
+}
+
+/* Glow effect on hover */
+.right-image img:hover {
+  box-shadow: 0 0 25px 10px #763b06; /* Enhanced glowing effect on hover */
+}
+
+
+
+/* Mobile-specific styling for screens smaller than 768px */
+@media (max-width: 768px) {
+  body {
+      background-color: #E8D3C5; /* Keep background consistent */
+      margin: 0;
+      padding: 0;
+  }
+
+  /* Header adjustments for smaller screens */
+  #brownstones {
+      font-size: 60px; /* Smaller, proportional font size */
+      margin: 20px 10px; /* Balanced spacing */
+      text-align: center;
+  }
+
+  /* Wrapper section: evenly spaced and centered */
+  .wrapper {
+      padding: 10px;
+  }
+
+  .wrapper section {
+      margin: 10px 0; /* Add vertical spacing */
+      text-align: center;
+      font-size: 16px; /* Adjust text size for readability */
+  }
+
+  /* Adjust paragraph styles */
+  p1 {
+      font-size: 14px; /* Smaller font for mobile */
+      line-height: 1.6; /* Improve readability with better spacing */
+      margin: 10px 15px; /* Consistent spacing */
+      text-align: justify; /* Enhance alignment */
+  }
+
+  p {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  /* Flex-container: stacked for mobile */
+  .flex-container {
+      flex-direction: column; /* Stack items vertically */
+      gap: 15px; /* Space between stacked items */
+      margin: 10px 15px; /* Add some margin to fit content */
+  }
+
+  .flex-container > div {
+      width: 100%; /* Full width for content blocks */
+      text-align: justify; /* Better alignment for mobile */
+  }
+
+  /* Image adjustments for responsive sizing */
+  .right-image img {
+      width: 100%; /* Full width of the screen */
+      max-width: 390px; /* Set a max limit for better scaling */
+      height: auto; /* Maintain aspect ratio */
+      margin: 10px auto; /* Center the image */
+      display: block; /* Ensure proper alignment */
+      box-shadow: 0 0 8px 2px #5b2707cc; /* Softer glow for mobile */
+  }
+
+  .right-image {
+      position: static; /* Reset positioning for simplicity */
+      text-align: center; /* Center the image container */
+      padding: 10px;
+  }
+
+  /* Adjust underline effect for header hover */
+  #brownstones:hover::after {
+      width: 100%; /* Shorter underline effect */
+  }
+}
