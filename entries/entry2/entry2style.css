@@ -1,87 +1,152 @@
+/* Global Styles */
 body {
-    background-color: #cccccc;
+    background-color: #bbe4bd;
     padding: 10px;
+    margin: 0;
+    transition: background-color 0.5s ease; /* Smooth color transition */
 }
 
+/* Title styling */
 h1 {
     text-align: center;
-    color: #308e33;
-    font-size: 170px;
+    color: #52b756;
     font-style: normal;
     font-family: "am-udine", sans-serif;
+    font-size: 170px;
     font-weight: 400;
-    margin-bottom: 0px;
+    margin-bottom: -10px;
     margin-top: 20px;
 }
 
-/* Flexbox container */
+/* Items */
 .container {
     display: flex;
-    justify-content: center; /* Aligns items horizontally */
-    align-items: center; /* Aligns items vertically */
-    height: 35vh; /* Full viewport height */
-    width: 170;
-    background-color: #dbdbdb;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+    background-color: transparent;
     margin-top: 10px;
     margin-bottom: 10px;
-    flex-wrap: wrap; /* Allows items to wrap if necessary */
+    flex-wrap: wrap;
 }
 
-/* Common styles for all items */
+/* Common styles for items */
 .item {
     color: white;
-    padding: 50px;
+    padding: 40px;
     margin: 40px;
     border-radius: 20px;
     font-size: 20px;
     text-align: center;
     width: 100px;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
-/* Individual background colors for each item */
-.item-1 {
-    background-color: #228B22; /* ForestGreen */
-}
+/* Item background colors */
+.item-1 { background-color: #228B22; }
+.item-2 { background-color: #7CFC00; }
+.item-3 { background-color: #8A9A5B; }
+.item-4 { background-color: #6B8E23; }
+.item-5 { background-color: #87CEEB; }
 
-.item-2 {
-    background-color: #7CFC00; /* LawnGreen */
-}
-
-.item-3 {
-    background-color: #8A9A5B; /* MossGreen */
-}
-
-.item-4 {
-    background-color: #6B8E23; /* OliveDrab */
-}
-
-.item-5 {
-    background-color: #87CEEB; /* SkyBlue */
-}
-
-/* Hover effect on items */
+/* Hover effect */
 .item:hover {
-    transform: scale(1.1); /* Slightly increase size */
+    transform: scale(1.2);
 }
 
-p{
-    text-align: center;
+p {
+    text-align: left;
     color: #4a3d14;
     font-size: 18px;
     font-family: "ivyora-text", sans-serif;
     font-weight: 300;
     font-style: normal;
+    margin-left: 20px;
 }
 
+/* Flex container for text */
 .flex-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  
-  .flex-container > div {
-    width: 60%;
-    text-align: center;
-    line-height: 1.5; 
-  }
+    align-items: left;
+    margin-left: 35px;
+    margin-top: -15px;
+}
+
+.flex-container > div {
+    width: 53%;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* Container for the image */
+.right-image {
+    flex-shrink: 0; 
+    margin-left: 875px; /* Space between the text and image */
+    margin-top: -345px;
+}
+
+.right-image img {
+    width: 550px; 
+    height: auto;
+}
+
+
+
+
+
+/* Mobile Styles - Media Query */
+@media (max-width: 768px) {
+    body {
+        padding: 5px; 
+    }
+
+    h1 {
+        font-size: 100px; 
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Update item styles for smaller screens */
+    .item {
+        padding: 20px;
+        margin: 15px;
+        width: 80%; 
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .flex-container {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .flex-container > div {
+        width: 90%; 
+    }
+
+    .right-image {
+        margin-left: 0; 
+        margin-top: 30px;
+        text-align: center; 
+    }
+
+    .right-image img {
+        width: 85%; 
+        max-width: 500px; 
+    }
+}
+

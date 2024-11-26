@@ -3,7 +3,7 @@ body {
     margin: 0px;
     padding: 0px;
 }
-  
+
 h1 {
     text-align: center;
     color: #2e93ac;
@@ -52,12 +52,12 @@ h1 {
     flex-wrap: wrap; /* Allows items to wrap if necessary */
   }
   
-  .item {
+.item {
     color: white;
     padding: 50px;
     margin: 40px;
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     width: 100px;
     transition: transform 0.3s, background-color 0.3s;
@@ -106,15 +106,38 @@ h1 {
     transform: scale(1.1); 
   }
 
-p{
+p {
     text-align: left;
     color: #4a3d14;
     font-size: 18px;
     font-family: "ivyora-text", sans-serif;
     font-weight: 300;
     font-style: normal;
+    border: 3px solid #B4C8D6; /* Initial border color */
+    padding: 10px; /* Adds space inside the border */
+    border-radius: 8px; /* Rounds the corners */
+    animation: borderColorChange 3s infinite; /* Animation for border color change */
 }
-  
+
+/* Keyframes for the border color change */
+@keyframes borderColorChange {
+    0% {
+        border-color: #B4C8D6; /* Initial color */
+    }
+    25% {
+        border-color: #A0C9E8; /* Light blue */
+    }
+    50% {
+        border-color: #5fb8d5; /* Lighter cyan blue */
+    }
+    75% {
+        border-color: #014264; /* Deeper blue */
+    }
+    100% {
+        border-color: #B4C8D6; /* Back to the initial color */
+    }
+}
+ 
 .flex-container {
     display: flex;
     flex-direction: row; /* Arrange items in a row */

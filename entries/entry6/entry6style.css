@@ -1,42 +1,28 @@
-/* Large devices (laptops/desktops) */
-@media only screen and (min-width: 1000px) {
-    body {
-        background-color: #181616; /* Black */
-    }
-}
-
-/* Medium to large devices (tablets and small laptops) */
-@media only screen and (min-width: 800px) and (max-width: 999px) {
-    body {
-        background-color: #FF00FF; /* Neon Pink */
-    }
-}
-
-/* Medium devices (tablets) */
-@media only screen and (min-width: 600px) and (max-width: 799px) {
-    body {
-        background-color: #00c8ff; /* Neon Blue */
-    }
-}
-
-/* Small devices (phones) */
-@media only screen and (min-width: 340px) and (max-width: 599px) {
-    body {
-        background-color: #FF0000; /* Neon Red */
-    }
-}
-
 /* Styling for the entire page = Glow effect as the outline */
 body {
-    margin: 0;
-    padding: 1px; 
-    border: 10px solid #9900FF; /* Increase the thickness of the border */
-    box-shadow: 0 0 100px #9900FF, 0 0 200px #9900FF, 0 0 200px #9900FF; /* Glow effect */
+  margin: 0;
+  background-color: #181616;
+  border: 10px solid #9900FF; /* Purple border */
+  box-shadow: 0 0 50px 20px #9900FF; /* Initial purple glow effect */
+  animation: glowAnimation 2s infinite alternate; /* Animation */
 }
-  
+
+/* Keyframes for the glow effect */
+@keyframes glowAnimation {
+  0% {
+    box-shadow: 0 0 30px 20px #9900FF; /* Start with normal glow */
+  }
+  50% {
+    box-shadow: 0 0 100px 40px #9900FF; /* Increase the glow */
+  }
+  100% {
+    box-shadow: 0 0 40px 20px #9900FF; /* Return to normal glow */
+  }
+}
+ 
 h1 {
     text-align: center;
-    color: #39FF14;
+    color: #c70077;
     font-size: 170px;
     font-style: normal;
     font-family: "am-udine", sans-serif;
@@ -46,7 +32,7 @@ h1 {
   }
 
 p{
-    text-align: center;
+    text-align: left;
     color: #ffffff;
     font-size: 20px;
     font-family: "ivyora-text", sans-serif;
@@ -57,12 +43,111 @@ p{
 .flex-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     margin-bottom: 80px;
+    margin-left: 50px;
   }
   
 .flex-container > div {
-    width: 70%;
-    text-align: center;
+    width: 56%;
+    text-align: left;
     line-height: 1.5; 
   }
+
+/* Container for the image */
+.right-image {
+    flex-shrink: 0; 
+    margin-left: 820px; /* Space between the text and image */
+    margin-bottom: -24px;
+    margin-top: -300px;
+}
+
+.right-image img {
+    width: 570px; 
+    height: auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  font-size: 26px;
+  padding: 29px;
+  width: 530px;
+  border-radius: 100px;
+  margin-top: -35px;
+  margin-bottom: -35px;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: .8;
+  transition: 8ms ease-out;
+}
+
+
+
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  body {
+    border: 5px solid #9900FF; /* A thinner neon purple border */
+    box-shadow: 0 0px 20px #9900FF; /* Minimal glow effect for mobile */
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 80px; 
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px; 
+    text-align: left; 
+  }
+
+  .flex-container {
+    margin: 0 auto; 
+    align-items: center;
+    width: 90%; 
+  }
+
+  .flex-container > div {
+    width: 100%; /* Ensure the text block spans full width */
+    text-align: center; 
+  }
+
+  .right-image {
+    margin-left: 0; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center; 
+  }
+
+  .right-image img {
+    width: 100%; /* Scale image is to fit screen width */
+    max-width: 400px; 
+    height: auto;
+  }
+
+  .wrapper {
+    flex-direction: column; /* Stack content */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+    font-size: 16px; /* Adjust button size */
+    padding: 20px;
+    width: 90%; /* Make button span most of the screen width */
+    margin: 20px 0; /* Add space above and below button */
+    border-radius: 50px; /* Keep rounded style */
+  }
+}

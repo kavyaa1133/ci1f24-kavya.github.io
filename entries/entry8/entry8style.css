@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 95vh; /* Adjust height as needed to control how much of the upper part it covers */
+  height: 107vh; /* Adjust height as needed to control how much of the upper part it covers */
   overflow: hidden;
   z-index: -1; /* Send behind other content */
   transition: opacity 0.5s ease-in, opacity 0.2s ease-out; /* Smooth fade out, fast fade in */
@@ -72,7 +72,7 @@ h1 {
 p{
     text-align: left;
     color: #164867;
-    font-size: 22px;
+    font-size: 21px;
     font-family: "ivyora-text", sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -83,12 +83,12 @@ p{
     flex-direction: row;
     align-items: wrap;
     margin-top: 60px;
-    margin-left: 90px;
+    margin-left: 70px;
     gap: 40px;
   }
   
   .flex-container > div {
-    width: 60%;
+    width: 80%;
     text-align: left;
     line-height: 1.5; 
   }
