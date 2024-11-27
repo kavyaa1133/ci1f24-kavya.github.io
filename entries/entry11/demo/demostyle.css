@@ -1,24 +1,30 @@
+
 body {
-    background-color: #647e6b;
-   }
-   
-   .wrapper {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 100vh;
-   }
-   
-   .button {
-     background-color: black;
-     color: white;
-     font-size: 30px;
-     padding: 30px;
-     border-radius: 100px;
-   }
-   
-   .button:hover {
-     cursor: pointer;
-     opacity: .8;
-     transition: 8ms ease-out;
-   }
+  margin: 30px;
+  display: flex;
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+  /* This centers our sketch vertically. */
+  align-items: center;
+  color: midnightblue;
+}
+
+/* i'm using the z index to move the slider on top of the container */
+.color-tool {
+  z-index: 0;
+  display:  flex;
+  font-family: 'Lora', serif;
+  font-size:  10vw;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  letter-spacing: 1px;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+

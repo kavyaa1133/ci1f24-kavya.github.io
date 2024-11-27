@@ -43,8 +43,8 @@ h1 {
 /* Flexbox container */
 .container {
     display: flex;
-    justify-content: center; /* Aligns items horizontally */
-    align-items: center; /* Aligns items vertically */
+    justify-content: center; 
+    align-items: center; 
     height: 35vh; /* Full viewport height */
     width: 170;
     margin-top: 50px;
@@ -113,9 +113,9 @@ p {
     font-family: "ivyora-text", sans-serif;
     font-weight: 300;
     font-style: normal;
-    border: 3px solid #B4C8D6; /* Initial border color */
-    padding: 10px; /* Adds space inside the border */
-    border-radius: 8px; /* Rounds the corners */
+    border: 3px solid #B4C8D6; 
+    padding: 10px; 
+    border-radius: 8px;
     animation: borderColorChange 3s infinite; /* Animation for border color change */
 }
 
@@ -199,34 +199,35 @@ p {
 @media screen and (max-width: 768px) {
     /* Adjust the h1 font size for smaller screens */
     h1 {
-        font-size: 80px; /* Reduce the font size for mobile */
-        margin-top: 30px; /* Adjust the top margin for mobile */
+        font-size: 80px; 
+        margin-top: 30px; 
     }
   
     /* Adjust the container layout for smaller screens */
     .container {
         flex-direction: column; /* Stack items vertically */
         width: 100%;
-        height: auto; /* Remove fixed height for mobile */
+        height: auto; /* Remove fixed height for mobile, allowing scrolling */
     }
 
     /* Adjust individual items in the container */
     .item {
-        width: 65%; /* Make items take more space */
-        padding: 30px; /* Reduce padding for mobile */
-        font-size: 16px; /* Adjust font size */
-        margin: 20px 0; /* Adjust margins */
+        width: 65%; 
+        padding: 30px; 
+        font-size: 16px; 
+        margin: 20px 0; 
     }
 
     /* Adjust the flex-container to stack items */
     .flex-container {
         flex-direction: column; /* Stack text and image vertically */
-        margin-left: 20px;
+        margin-left: 0px;
+        width: 90%;
     }
 
     /* Adjust the right image size */
     .right-image img {
-        width: 200%; /* Make the image take full width */
+        width: 200%; 
         height: auto;
         margin-left: 2px;
         margin-right: 20px;
@@ -239,8 +240,8 @@ p {
 
     /* Adjust the paragraph text for readability */
     p {
-        font-size: 16px; /* Reduce font size */
-        margin-left: 10px; /* Adjust left margin */
+        font-size: 16px; 
+        margin-left: 10px; 
         width: 195%;
     }
 }

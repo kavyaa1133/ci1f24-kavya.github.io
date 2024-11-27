@@ -45,7 +45,7 @@ body::before {
     right: 0;
     bottom: 0;
     border: 10px solid #add8e64d; /* Additional inner icy border */
-    pointer-events: none; /* doesn't block other content */
+    pointer-events: none; /* Doesn't block other content */
     border-radius: 20px;
     box-shadow: inset 0 0 10px #ffffff99; /* Inner glow for frosty effect */
 }
@@ -96,7 +96,7 @@ p{
 /* Flexbox container for color items */
 .container {
   display: flex;
-  flex-direction: row; /* Arrange items in two columns */
+  flex-direction: row; 
   flex-wrap: wrap;
   justify-content: center; 
   align-items: center;
@@ -108,7 +108,7 @@ p{
   
 .item {
   color: white;
-  padding: 30px; /* Reduce padding for a smaller box size */
+  padding: 30px; 
   margin: 10px; 
   border-radius: 20px;
   font-size: 20px;
@@ -130,10 +130,12 @@ p{
 .item-5 {
   background-color: #3B5360; /* Deep Blue */
 }
+
 /* Hover effect on items */
 .item:hover {
-    transform: scale(1.1); /* Slightly increase size */
+    transform: scale(1.1); 
 }
+
 
 
 /* Media query for mobile screens */
@@ -156,7 +158,7 @@ p{
   } 
 
   p {
-      font-size: 16px;
+      font-size: 13.5px;
       line-height: 1.4;
   }
 

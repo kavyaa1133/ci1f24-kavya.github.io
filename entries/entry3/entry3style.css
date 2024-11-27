@@ -1,60 +1,191 @@
 body {
-    background-color: #cccccc;
+    background-color: #98dedf;
     padding: 10px;
+    margin: 0;
+    overflow: auto;
 }
 
+/* Title styling */
 h1 {
     text-align: center;
-    color: #165386;
-    font-size: 170px;
+    color: #658d82;
     font-style: normal;
     font-family: "am-udine", sans-serif;
+    font-size: 170px;
     font-weight: 400;
-    margin-bottom: 0px;
+    margin-bottom: -47px;
     margin-top: 20px;
+    margin-left: 440px;
+    display: inline-block; /* Ensures it behaves like an inline element but can be animated */
+    animation: floatEffect 2s ease-in-out infinite; /* Floating animation */
 }
 
-p{
-    text-align: center;
+/* Keyframes for floating effect */
+@keyframes floatEffect {
+    0% {
+        transform: translateY(0); /* Original position */
+    }
+    50% {
+        transform: translateY(-15px); /* Move up subtly */
+    }
+    100% {
+        transform: translateY(0); /* Back to original position */
+    }
+}
+
+p {
+    text-align: left;
     color: #4a3d14;
     font-size: 18px;
     font-family: "ivyora-text", sans-serif;
     font-weight: 300;
     font-style: normal;
+    margin-left: 30px;
+    margin-top: 40px;
 }
 
+/* Flex container for text */
 .flex-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  
-  .flex-container > div {
-    width: 60%;
-    text-align: center;
-    line-height: 1.5; 
-  }
+    align-items: flex-end; /* Align to the right side */
+    margin-top: -1px;
+    margin-right: 35px; 
+}
 
-/* Media Query for Tablets and Mobile Devices */
+.flex-container > div {
+    width: 58%;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* Wrapper section */
+.wrapper {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
+    margin-left: 1px;
+}
+
+/* Section styling inside the wrapper */
+.wrapper section {
+    margin: -15px 0;
+    text-align: center; 
+    font-size: 16px;
+    margin-left: 0; 
+    width: 100%; 
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+    transform-origin: left center; 
+    color: #ffffff; 
+}
+
+/* If you have text inside <p> in section, you can target them separately */
+.wrapper section p {
+    color: #ffffff; /* Explicitly set color for paragraphs in sections */
+}
+
+/* Hover effect for each section */
+.wrapper section:hover {
+    transform: scale(0.85); /* Slightly scale section for hover */
+}
+
+/* Container for the image */
+.right-image {
+    flex-shrink: 0; 
+    margin-left: 60px; 
+    margin-top: -300px;
+}
+
+.right-image img {
+    width: 520px;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.right-image img:hover {
+    filter: blur(2px); /* Apply blur */
+}
+
+
+
+/* Mobile Styles */
 @media (max-width: 768px) {
     body {
-        background-color: #7aa1b560;
+        background-color: #bee6f6;
+        padding: 10px;
+        margin: 0;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
+    /* Title styling for mobile */
     h1 {
-        font-size: 100px !important; 
+        font-size: 100px; 
+        text-align: center;
+        margin: 20px 0;
+        margin-left: 0;
     }
 
+    /* Paragraph styling for mobile */
     p {
-        font-size: 12px !important; 
+        font-size: 16px; 
+        margin: 20px 15px;
+        text-align: left; 
+    }
+
+    /* Flex container for text on mobile */
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: left; 
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: -10px;
+        width: 100%;
     }
 
     .flex-container > div {
-        width: 80% !important;
+        width: 100%; 
+        text-align: left;
+        line-height: 1.6;
+        margin-bottom: 10px;
     }
 
-    img {
-        width: 100% !important; /* Make image responsive */
-        height: auto !important; /* Maintain aspect ratio */
+    /* Wrapper section adjustments for mobile */
+    .wrapper {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    /* Section styling for mobile */
+    .wrapper section {
+        margin: -13px 0; 
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Container for the image on mobile */
+    .right-image {
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .right-image img {
+        width: 90%; 
+        height: auto;
     }
 }

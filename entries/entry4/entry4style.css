@@ -1,89 +1,253 @@
-body {
-  background-color: #cccccc;
-  padding: 10px;
+.leavesfall-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 107vh;
+    overflow: hidden;
+    z-index: -1;
+    animation: fallAnimation 11s infinite linear, fadeAnimation 9s infinite ease-in-out;
 }
 
+@keyframes fallAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes fadeAnimation {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0.5; /* Slightly faded */
+    }
+}
+
+.leavesfall-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+body {
+    background-color: #fff8d3; 
+    margin: 0;
+    padding: 0;
+    position: relative; 
+    overflow: hidden; 
+}
+ 
 h1 {
-  text-align: center;
-  color: #a91e1e;
-  font-size: 170px;
-  font-style: normal;
-  font-family: "am-udine", sans-serif;
-  font-weight: 400;
-  margin-bottom: 50px;
-  margin-top: 20px;
+    text-align: center;
+    color: #a95d1e;
+    font-size: 170px;
+    font-style: normal;
+    font-family: "am-udine", sans-serif;
+    font-weight: 400;
+    margin-bottom: 45px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 3px; 
+    border: 9px solid transparent; 
+    border-radius: 10px; 
+    background-clip: content-box; /* Ensures border doesn't overlap text */
+    animation: borderAnimation 3s linear infinite; /* Border animation */
 }
 
+/* Keyframes for the border animation */
+@keyframes borderAnimation {
+    0% {
+        border-color: #ff7f50; 
+    }
+    25% {
+        border-color: #ffcc00; 
+    }
+    50% {
+        border-color: #a95d1e; 
+    }
+    75% {
+        border-color: #d1493b; 
+    }
+    100% {
+        border-color: #ff7f50; 
+    }
+}
+  
 p{
-  text-align: center;
-  color: #4a3d14;
-  font-size: 29px;
-  font-family: "ivyora-text", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+    text-align: left;
+    color: #4a3d14;
+    font-size: 20px;
+    font-family: "ivyora-text", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
-
+  
 .flex-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 50px;
 }
-
+  
 .flex-container > div {
-  width: 70%;
-  text-align: center;
-  line-height: 1.5; 
+    width: 50%;
+    text-align: left;
+    line-height: 1.5; 
 }
 
-/* Flex container styles */
-.flex-container {
-  display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center;    /* Center content vertically */
-  padding: 20px;         
+/* Flexbox container on the right side */
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    width: 30%; 
+    margin-left: 870px;
+    margin-top: -419px;
+    padding-left: 20px;
+    gap: 12px;
 }
 
-/* Style for the text block */
-.theater-text {
-  font-size: 18px;              /* Adjust font size as needed */
-  line-height: 1.6;             /* Line height for readability */
-  color: #333;                  /* Text color */
-  position: relative;           /* Position for the popup */
+/* Individual background colors for each item */
+.item-1 {
+    background-color: #d9a441; 
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    width: 100%; 
+    color: white;
+    text-align: center;
 }
 
-/* Hover effect: scale the text */
-.theater-text:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+.item-2 {
+    background-color: #b1361e; 
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    width: 100%; 
+    color: white;
+    text-align: center;
 }
 
-/* Popup image styles */
-.popup-image {
-  position: absolute;           /* Absolute positioning */
-  top: 50%;                    /* Center vertically */
-  left: 50%;                   /* Center horizontally */
-  transform: translate(-50%, -50%); /* Center the image */
-  opacity: 0;                  /* Hide the image initially */
-  transition: opacity 0.3s ease; /* Smooth transition for opacity */
-  pointer-events: none;        /* Prevent interaction with the image */
+.item-3 {
+    background-color: #e87d22; 
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    width: 100%; 
+    color: white;
+    text-align: center;
 }
 
-/* Show image on hover */
-.theater-text:hover .popup-image {
-  opacity: 1;                  /* Show the image */
-  z-index: 10;                 /* Bring the image above other elements */
+.item-4 {
+    background-color: #6b8e23; 
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    width: 100%; 
+    color: white;
+    text-align: center;
 }
 
-/* Image styling */
-.popup-image img {
-  width: 1360px;                /* Adjust image size */
-  height: 430px;                /* Maintain aspect ratio */
+.item-5 {
+    background-color: #8a4b1c; 
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    width: 100%; 
+    color: white;
+    text-align: center;
 }
 
-/* Apply a golden border around the body */
-body {
-  margin: 0;
-  padding: 0;
-  border: 12px solid #d4af37; /* Adjust thickness if needed */
-  box-sizing: border-box;
-  min-height: 100vh; /* Ensure the page height covers the viewport */
+
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+    /* General body adjustments */
+    body {
+        padding: 0; 
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto; /* allows scrolling */
+    }
+
+    /* Title styling for mobile */
+    h1 {
+        font-size: 60px;
+        text-align: center;
+        margin: 15px 0;
+        border: 4px solid;
+        padding: 10px;
+    }
+
+    /* Paragraph styling */
+    p {
+        font-size: 16px;
+        margin: 10px 15px;
+        text-align: left;
+    }
+
+    /* Flex container for text */
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        width: 100%;
+        padding: 0 15px;
+        margin-left: 10px;
+    }
+
+    .flex-container > div {
+        width: 90%; 
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Image container */
+    .leavesfall-image {
+        position: relative;
+        width: 100%; 
+        height: 50vh; 
+        margin-top: -950px;
+    }
+
+    .leavesfall-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+    }
+
+    /* Container for the list of items (colors) */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items */
+        width: 100%;
+        margin-top: 20px;
+        padding-left: 0;
+    }
+
+    .item-1, .item-2, .item-3, .item-4, .item-5 {
+        width: 90%; 
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    /* Remove unnecessary margins and reset positioning */
+    .container {
+        margin-left: 0;
+        margin-top: 0;
+        padding-left: 0;
+    }
 }

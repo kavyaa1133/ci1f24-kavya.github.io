@@ -1,0 +1,181 @@
+body {
+  background-color: #F1E5D6;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Basic styling for h1 */
+h1 {
+  text-align: center;
+  color: #9B4D96;
+  font-size: 170px;
+  font-style: normal;
+  font-family: "am-udine", sans-serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  cursor: pointer; /* Make sure the cursor is a pointer when hovering */
+  position: relative; /* Ensure the element is properly positioned */
+  z-index: 10; /* Make sure the h1 is above other elements */
+  animation: flickerAnimation 0.5s infinite alternate;
+}
+
+@keyframes flickerAnimation {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.4; /* Flicker effect (make it semi-transparent) */
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+h1:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+/* Items */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 100%;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+/* Common styles for items */
+.item {
+  color: white;
+  padding: 40px;
+  margin: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+  width: 100px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Item background colors */
+.item-1 { background-color: #E60012; }
+.item-2 { background-color: #FF7F32; }
+.item-3 { background-color: #007A4D; }
+.item-4 { background-color: #0066CC; }
+.item-5 { background-color: #757575; }
+
+/* Hover effect */
+.item:hover {
+  transform: scale(1.2);
+}
+
+/* Initial style for <p> */
+p {
+  text-align: left;
+  color: #4a3d14; /* Original color */
+  font-size: 19px;
+  font-family: "ivyora-text", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-left: 105px;
+}
+
+/* Flex container for text */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 35px;
+  margin-top: -15px;
+}
+
+.flex-container > div {
+  width: 64%;
+  text-align: left;
+  line-height: 1.5;
+}
+
+#p5-overlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows interactions with underlying content */
+  z-index: 100; /* Sits on top of everything */
+}
+
+h2 {
+  position: absolute; /* Allows positioning relative to the screen */
+  bottom: 60px; /* Distance from the bottom */
+  right: 70px; /* Distance from the right */
+  color: #000000; 
+  font-size: 16px;
+  font-family: "ivyora-text", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0; 
+}
+
+
+
+
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 768px) {
+  /* Stack items */
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    height: auto; 
+    margin: 0;
+  }
+
+  .item {
+    width: 80%; 
+    margin: 20px 0; 
+    padding: 20px; 
+  }
+
+  /* Stack text container */
+  .flex-container {
+    align-items: left; 
+    margin-left: 30px; 
+    margin-top: 10px;
+    width: 90%; 
+  }
+
+  .flex-container > div {
+    width: 100%; 
+    text-align: left; 
+    line-height: 1.5; 
+  }
+
+  /* Adjust p tag margins */
+  p {
+    margin-left: 0;
+    text-align: left; 
+    font-size: 16px; 
+  }
+
+  /* Stack and adjust h2 positioning */
+  h2 {
+    position: static; /* Allow natural stacking */
+    text-align: center; 
+    margin: 20px 0; 
+    font-size: 14px; 
+  }
+
+  /* Adjust h1 for mobile */
+  h1 {
+    font-size: 100px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+

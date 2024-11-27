@@ -1,0 +1,158 @@
+/* Styling for the entire page = Glow effect as the outline */
+body {
+  margin: 0;
+  background-color: #181616;
+  overflow: auto;
+  border: 10px solid #9900FF; /* Purple border */
+  box-shadow: 0 0 50px 20px #9900FF; /* Initial purple glow effect */
+  animation: glowAnimation 2s infinite alternate; /* Animation */
+}
+
+/* Keyframes for the glow effect */
+@keyframes glowAnimation {
+  0% {
+    box-shadow: 0 0 30px 20px #9900FF; /* Start with normal glow */
+  }
+  50% {
+    box-shadow: 0 0 100px 40px #9900FF; /* Increase the glow */
+  }
+  100% {
+    box-shadow: 0 0 40px 20px #9900FF; /* Return to normal glow */
+  }
+}
+ 
+h1 {
+    text-align: center;
+    color: #c70077;
+    font-size: 170px;
+    font-style: normal;
+    font-family: "am-udine", sans-serif;
+    font-weight: 400;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+h1:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+p{
+    text-align: left;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "ivyora-text", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 80px;
+    margin-left: 50px;
+  }
+  
+.flex-container > div {
+    width: 56%;
+    text-align: left;
+    line-height: 1.5; 
+  }
+
+/* Container for the image */
+.right-image {
+    flex-shrink: 0; 
+    margin-left: 820px; /* Space between the text and image */
+    margin-bottom: -24px;
+    margin-top: -300px;
+}
+
+.right-image img {
+    width: 570px; 
+    height: auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  font-size: 26px;
+  padding: 29px;
+  width: 530px;
+  border-radius: 100px;
+  margin-top: -35px;
+  margin-bottom: -35px;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: .8;
+  transition: 8ms ease-out;
+}
+
+
+
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  body {
+    border: 5px solid #9900FF; /* A thinner neon purple border */
+    box-shadow: 0 0px 20px #9900FF; /* Minimal glow effect for mobile */
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 80px; 
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px; 
+    text-align: left; 
+  }
+
+  .flex-container {
+    margin: 0 auto; 
+    align-items: center;
+    width: 90%; 
+  }
+
+  .flex-container > div {
+    width: 100%; /* Ensure the text block spans full width */
+    text-align: center; 
+  }
+
+  .right-image {
+    margin-left: 0; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center; 
+  }
+
+  .right-image img {
+    width: 100%; /* Scale image is to fit screen width */
+    max-width: 400px; 
+    height: auto;
+  }
+
+  .wrapper {
+    flex-direction: column; /* Stack content */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+    font-size: 16px; /* Adjust button size */
+    padding: 20px;
+    width: 90%; /* Make button span most of the screen width */
+    margin: 20px 0; /* Add space above and below button */
+    border-radius: 50px; /* Keep rounded style */
+  }
+}

@@ -34,7 +34,7 @@ section {
 
 /* Color class will be dynamically assigned in JS file */
 body.light {
-    background-color: var(--light-color, papayawhip);  /* Default color is papayawhip */
+    background-color: var(--light-color, papayawhip);  /* Default color */
 }
 
 h1 {
@@ -105,8 +105,8 @@ p{
 
 /* Image styling */
 .right-image img {
-    width: 397px;  /* Set a smaller width for the image */
-    height: auto;  /* Maintain the aspect ratio */
+    width: 397px;  
+    height: auto; 
 }
 
 
@@ -116,9 +116,10 @@ p{
 @media (max-width: 768px) {
     /* Section layout adjustments */
     section {
-        margin-left: 5%;  /* Reduce the left margin for better mobile view */
+        margin-left: 5%;  
         height: auto;     
-        justify-content: center; 
+        justify-content: center;
+        margin-bottom: 18px; 
         align-items: center;     
     }
 
@@ -126,8 +127,8 @@ p{
     .button {
         font-size: 16px;       
         padding: 15px 30px;    
-        margin: 15px 0;        /* Adjust space between buttons */
-        width: auto;           /* Allow buttons to adjust to text size */
+        margin: 15px 0;       
+        width: auto;           
     }
 
     /* Heading adjustments */
@@ -138,12 +139,12 @@ p{
 
     /* Paragraph font size adjustment */
     p {
-        font-size: 12px;       
+        font-size: 15px;       
     }
 
     /* Right image container adjustments */
     .right-image {
-        position: relative;    /* Reset position to make it responsive */
+        position: relative;    
         top: auto;            
         right: auto;          
         left: 50%;            
@@ -153,28 +154,30 @@ p{
         border-style: solid;
         border-color: #6a7f4d; 
         width: 100%;           
-        max-width: 300px;      
+        max-width: 300px;   
+        margin-left: 10px;     
     }
 
     /* Image styling adjustments */
     .right-image img {
         width: 100%;           
         height: auto;         
-        border-radius: 0;      
+        border-radius: 0;    
     }
 
     /* Flex container adjustments */
     .flex-container {
-        margin-top: 20px;    
-        margin-left: 0;        
-        gap: 15px;             /* Add space between items */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;   /* Center-align the items */
+        margin-top: 20px;
+        margin-right: 15px;    
+        margin-left: 15px;        
+        gap: 15px;             
+        flex-direction: column; 
+        align-items: center;  
     }
 
     /* Flex container elements */
     .flex-container > div {
-        width: 100%;           /* Make the divs take up full width */
+        width: 100%;          
         text-align: center;   
     }
 }

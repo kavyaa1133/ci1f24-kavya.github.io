@@ -2,6 +2,7 @@
 body {
   margin: 0;
   background-color: #181616;
+  overflow: auto;
   border: 10px solid #9900FF; /* Purple border */
   box-shadow: 0 0 50px 20px #9900FF; /* Initial purple glow effect */
   animation: glowAnimation 2s infinite alternate; /* Animation */

@@ -1,0 +1,233 @@
+body {
+  background-color: #f7ef00;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 170px;
+  font-style: normal;
+  font-family: "am-udine", sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 20px; /* Add padding inside the border */
+  background-color: #fff; 
+  border: 10px solid transparent; /* Transparent border to create space for the stripes */
+  border-image: repeating-linear-gradient(45deg, #000000 0%, #000000 20%, #F7EA00 20%, #F7EA00 40%) 1; 
+  animation: stripeMove 2s linear infinite; /* The moving animation */
+}
+
+h1:hover {
+  transform: scale(1.01); /* Slight zoom effect on hover */
+}
+
+/* Keyframes for moving the stripes */
+@keyframes stripeMove {
+  0% {
+    border-image-source: repeating-linear-gradient(45deg, #000000 0%, #000000 20%, #F7EA00 20%, #F7EA00 40%);
+  }
+  50% {
+    border-image-source: repeating-linear-gradient(45deg, #000000 25%, #000000 45%, #F7EA00 45%, #F7EA00 65%);
+  }
+  100% {
+    border-image-source: repeating-linear-gradient(45deg, #000000 50%, #000000 70%, #F7EA00 70%, #F7EA00 90%);
+  }
+}
+
+
+p {
+  text-align: left;
+  color: #4a3d14;
+  font-family: "ivyora-text", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the top */
+  justify-content: center; /* Center content horizontally */
+  padding: 20px; 
+  margin-top: -280px;
+  margin-left: 20px;
+}
+
+.flex-container > div {
+  width: 50%; 
+  text-align: left;
+  line-height: 1.5;
+}
+
+h2 {
+  text-align: center;
+  font-family: "ivyora-text", sans-serif;
+  color: black;
+  margin-top: 90px;
+  font-size: 25px;
+  margin-right: -723px;
+}
+
+.color-palette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  margin-left: 740px;
+  position: relative;
+  overflow: hidden;
+}
+
+.color-bar {
+  width: 100px;
+  height: 60px;
+  border-radius: 5px;
+  transform: translateY(100px); /* Start from below */
+  animation: slideIn 2s ease-in-out forwards; /* Slide in animation */
+}
+
+.color-bar:nth-child(1) {
+  animation-delay: 0s;
+}
+.color-bar:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.color-bar:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.color-bar:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.color-bar:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateY(100px); /* Start below */
+  }
+  100% {
+      transform: translateY(0); /* Slide to original position */
+  }
+}
+
+.color-bar:hover {
+  transform: scale(1.1); /* Slight zoom on hover for interaction */
+  transition: transform 0.3s ease;
+}
+
+/* Taxi animation container */
+.taxi-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  margin-top: 50px;
+  background: #333; /* The road */
+}
+
+/* Single taxi */
+.taxi {
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  background-color: #FFD700;
+  border: 3px solid #000;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  animation: zoom 3.5s linear infinite; /* Smooth horizontal motion */
+}
+
+/* Taxi wheels */
+.taxi::before,
+.taxi::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.taxi::before {
+  left: 10px;
+}
+
+.taxi::after {
+  right: 10px;
+}
+
+/* Keyframes for taxi zooming across the screen */
+@keyframes zoom {
+  0% {
+    transform: translateX(-150px); /* Start off-screen */
+  }
+  100% {
+    transform: translateX(100vw); /* End off-screen */
+  }
+}
+
+
+
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 90px;
+    padding: 10px;
+  }
+
+  .flex-container {
+    margin-top: 20px;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .flex-container > div {
+    width: 90%; 
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: 30px;
+    font-size: 20px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .color-palette {
+    flex-direction: row;
+    margin-left: 0;
+    gap: 15px;
+    margin-top: 4px;
+    margin-bottom: -7px;
+  }
+
+  .color-bar {
+    width: 80px;
+    height: 40px;
+  }
+
+  .taxi-container {
+    height: 100px;
+  }
+
+  .taxi {
+    width: 80px;
+    height: 40px;
+  }
+
+  .taxi::before,
+  .taxi::after {
+    width: 15px;
+    height: 15px;
+  }
+}

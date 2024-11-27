@@ -3,37 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fall Foliage</title>
+    <title>Express Subways</title>
+    <link rel="icon" type="image/png" href="entry7favicon.png" sizes="32x32"/>
     <link rel="stylesheet" href="https://use.typekit.net/zzd2ger.css">
-    <link rel="stylesheet" href="https://use.typekit.net/bxe4rje.css">        
+    <link rel="stylesheet" href="https://use.typekit.net/bxe4rje.css">
     <link rel="stylesheet" href="entry7style.css">
-
 </head>
 
 <body>
-<!-- Background sound for fall -->
-<audio controls>
-    <source src="entry7backgroundmusic.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
+    <h1 class="flicker-effect">Express Subways</h1>
 
+    <div class="draw">
+    <h2>You can draw on the screen. Click to change colors.</h2> 
+    </div>
 
-<div class="title-wrapper">
-    <img src="leavespile.png" alt="Leaves Pile Left" class="leaves-image left">
-    <h1>Fall Foliage</h1>
-    <img src="leavespile.png" alt="Leaves Pile Right" class="leaves-image right">
-</div>
+    <div class="container">
+        <div class="item item-1" data-color="#E60012">Rushing Red</div>
+        <div class="item item-2" data-color="#FF7F32">In Motions...</div>
+        <div class="item item-3" data-color="#007A4D">Calm Transit</div>
+        <div class="item item-4" data-color="#0066CC">New and Reliable?</div>
+        <div class="item item-5" data-color="#757575">Baseline Backbone</div>
+    </div>
 
-<body>
-
-<div class="flex-container">
-    <div class="fall-text">
-        <p>As autumn sweeps over New York, the city transforms into a canvas of warm oranges, evoking nostalgia and comfort. The vibrant colors remind me of the changing seasons back home in Antwerp, grounding me in familiarity while also encouraging me to embrace the new.</p>
-        <p>Walking through Central Park during fall, I feel a deep connection to nature and the beauty of change. Each fallen leaf tells a story of transition, echoing my journey of adaptation in this bustling city. The oranges also symbolize the warmth of community, as neighbors come together to celebrate the season, reflecting my own experiences of building connections in this diverse city.</p>
-    <div class="popup-image">
-        <img src="fallfoliage.png" alt="FallFoliage" width="1450" height="428">
+    <div class="flex-container">
+        <div>
+            <p>New York's subway system is more than just transportation; it is the city's pulse. Each express train line, from the vibrant red of the 2, 4, and 5 to the cool blue of the A, C, and E, reflects the energy and rhythm of the city. The reds and oranges signal urgency, while the greens and blues offer brief moments of calm amidst the rush. The steel grey symbolizes the system’s reliability and strength.</p>
+            <br>
+            <p>Looking at these colors, I am reminded not of a rainbow but of the subway lines that define my experience in New York City—an ever-moving reminder of the city’s power and resilience.</p>
         </div>
     </div>
-</div>
+
+    <!-- p5.js Drawing Area -->
+    <div id="p5-overlay"></div>
+
+    <script src="entry7.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.min.js"></script>
+    <script src="entry7sketch.js"></script>
 </body>
 </html>

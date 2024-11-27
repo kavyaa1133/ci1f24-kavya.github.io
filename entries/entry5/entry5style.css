@@ -29,14 +29,14 @@ h1 {
 /* Flexbox container */
 .container {
   display: flex;
-  justify-content: center; /* Aligns items horizontally */
-  align-items: center; /* Aligns items vertically */
-  height: 30vh; /* Full viewport height */
+  justify-content: center;
+  align-items: center; 
+  height: 30vh; 
   width: 170;
-  background-color: #dbdbdb;
+  background-color: transparent;
   margin-top: 10px;
   margin-bottom: 10px;
-  flex-wrap: wrap; /* Allows items to wrap if necessary */
+  flex-wrap: wrap; 
 }
 
 /* Common styles for all items */
@@ -80,7 +80,7 @@ h1 {
 }
 
 .item:hover {
-  transform: scale(1.1); /* Slightly increase size */
+  transform: scale(1.01); /* Slightly increase size */
   border: 2px solid #8f7337; /* Add a dark border on hover */
 }
 
@@ -99,7 +99,7 @@ p{
   flex-direction: column;
   align-items: left;
   margin-top: 45px;
-  margin-left: 70px;
+  margin-left: 112px;
 }
 
 .flex-container > div {
@@ -110,15 +110,15 @@ p{
 
 /* Styling for the image container */
 .right-image {
-  position: absolute;         /* Allow positioning relative to the page */
-  left: calc(100% - 295px);   /* Move the image to the right edge and adjust */  
-  top: 305px;                  /* Add some space from the top */
+  position: absolute;        
+  left: calc(100% - 305px);   /* Move the image to the right edge and adjust */  
+  top: 350px;                  /* Add space from the top */
 }
 
 /* Styling for the image */
 .right-image img {
-  width: 325px;               /* Set the width of the image */
-  height: 510px;               /* Maintain aspect ratio */
+  width: 325px;               
+  height: 510px;            
 }
 
 
@@ -146,22 +146,23 @@ body {
 
 /* Adjust the heading */
   h1 {
-    font-size: 100px; /* Smaller font size for mobile */
+    font-size: 100px; 
     text-align: center;
     margin-top: 20px;
   }
 
 /* Flex container for items */
   .container {
-    display: block; /* Change to block for stacking */
+    display: block; /* For stacking */
     margin-top: 20px;
     padding: 0 15px; /* Add padding to keep content spaced */
+    background-color: transparent;
   }
 
 /* Style for each item */
   .item {
-    width: 100%; /* Full width for mobile */
-    margin: 10px 0; /* Space between items */
+    width: 100%; 
+    margin: 10px 0; 
     padding: 20px;
     text-align: center;
     font-size: 18px;
@@ -173,14 +174,14 @@ body {
   position: relative;
   width: 100%;
   text-align: left;
-  margin-top: -310px;
-  margin-left: -65px; /* Move the image a little to the left */
-  margin-right: 0; /* Remove margin-right */
+  margin-top: -320px;
+  margin-left: -53px; /* Move the image a little to the left */
+  margin-right: 0; 
 }
 
 /* Make the image responsive */
 .right-image img {
-  width: 50%;
+  width: 55%;
   height: auto;
 }
 
@@ -189,11 +190,11 @@ body {
     display: block; /* Stack flex items */
     margin-top: 255px;
     padding-left: 1px;
-    margin-left: 25px;
+    margin-left: 40px;
   }
 
 .flex-container > div {
-    width: 100%; /* Full width for text */
+    width: 100%; 
     margin-bottom: 20px; /* Space between text sections */
 }
 }

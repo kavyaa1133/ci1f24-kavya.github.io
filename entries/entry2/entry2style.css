@@ -1,9 +1,9 @@
-/* Global Styles */
 body {
     background-color: #bbe4bd;
     padding: 10px;
     margin: 0;
     transition: background-color 0.5s ease; /* Smooth color transition */
+    cursor: url('birdcursor.png'), auto;
 }
 
 /* Title styling */
