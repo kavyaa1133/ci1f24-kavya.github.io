@@ -1,23 +1,49 @@
-
 body {
-    background-color: #cacaca;
+    background: linear-gradient(45deg, #f2b80f, #5d779a, #3f4464);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
     padding: 50px;
 }
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 h1{
     text-align: center;
-    color: #5d779a;
+    color: #ececec;
     font-size: 120px;
     font-style: italic;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: -48px;
+}
+
+h2{
+    text-align: center;
+    color: #ececec;
+    font-size: 100px;
+    font-style: italic;
+    margin-bottom: 60px;
+    margin-top: -48px;
 }
 
 p{
-    text-align: center;
-    color: #3f4464;
+    text-align: left;
+    color: #ececec;
     font-family: "ivyora-text", sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 20px;
+    margin-top: 30px;
 }
 
 /* Navigation Menu Styles */
@@ -34,12 +60,12 @@ nav ul {
 
 nav li {
     display: inline;      /* Display list items in a line */
-    margin-right: 15px;  /* Space between items */
+    margin-right: 16px;  /* Space between items */
 }
 
 nav a {
     text-decoration: underline; /* underline from links */
-    color: #5d779a;       
+    color: #ececec;       
     font-size: 18px;      /* Font size for navigation links */
     font-weight: 550;     
 }
@@ -47,5 +73,8 @@ nav a {
 nav a:hover {
     text-decoration: none; /* remove underline on hover for better visibility */
     font-weight: 950;     /* Bold text when hovering */
-    color: #275fa8;
+    color: #ececec;
 }
+
+
+
